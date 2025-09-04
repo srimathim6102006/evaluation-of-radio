@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Radio Evaluation</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f8ff;
+      /* light blue background */
+      color: #333;
+    }
+
+    header {
+      background: #1e90ff;
+      /* radio blue */
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #104e8b;
+      /* deep blue headings */
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    form input,
+    form textarea,
+    form button,
+    form select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #1e90ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #104e8b;
+    }
+
+    footer {
+      background: #1e90ff;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <h1>📻 Radio Evaluation Portal 📻</h1>
+
+    <nav>
+
+      <a href="#about">About</a>
+
+      <a href="#criteria">Criteria</a>
+
+      <a href="#reviews">Reviews</a>
+
+      <a href="#feedback">Feedback</a>
+
+    </nav>
+
+  </header>
+
+  <!-- About -->
+
+  <section id="about">
+
+    <h2>About This Portal</h2>
+
+    <div class="card">
+
+      <p>This website is designed to evaluate radio shows, stations, and listener experiences.
+
+        You can explore evaluation criteria, read reviews, and submit your feedback.</p>
+
+    </div>
+
+  </section>
+
+  <!-- Criteria -->
+
+  <section id="criteria">
+
+    <h2>Evaluation Criteria</h2>
+
+    <div class="card">
+
+      <ul>
+
+        <li>🎵 Sound Quality</li>
+
+        <li>🎤 Presenter Performance</li>
+
+        <li>📡 Signal Strength</li>
+
+        <li>📚 Content Relevance</li>
+
+        <li>🎧 Listener Engagement</li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- Reviews -->
+
+  <section id="reviews">
+
+    <h2>Sample Reviews</h2>
+
+    <div class="card">
+
+      <h3>Radio Station A</h3>
+
+      <p>Excellent sound quality, engaging hosts, and a wide variety of music genres.
+
+        Listener satisfaction: ⭐⭐⭐⭐☆</p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Radio Station B</h3>
+
+      <p>Great local coverage but the signal is weak in some areas.
+
+        Listener satisfaction: ⭐⭐⭐☆☆</p>
+
+    </div>
+
+  </section>
+
+  <!-- Feedback Form -->
+
+  <section id="feedback">
+
+    <h2>Submit Your Feedback</h2>
+
+    <div class="card">
+
+      <form id="feedbackForm">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <label for="station">Radio Station</label>
+
+        <input type="text" id="station" placeholder="Station Name" required>
+
+        <label for="rating">Overall Rating</label>
+
+        <select id="rating" required>
+
+          <option value="">Choose...</option>
+
+          <option>⭐⭐⭐⭐⭐ Excellent</option>
+
+          <option>⭐⭐⭐⭐ Good</option>
+
+          <option>⭐⭐⭐ Average</option>
+
+          <option>⭐⭐ Poor</option>
+
+          <option>⭐ Very Poor</option>
+
+        </select>
+
+        <textarea id="comments" placeholder="Your Comments" required></textarea>
+
+        <button type="submit">Submit</button>
+
+      </form>
+
+      <p id="status"></p>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+  </footer>
+
+  <!-- JavaScript -->
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const form = document.getElementById("feedbackForm");
+    const status = document.getElementById("status");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      status.textContent = "✅ Thank you for your feedback! (Demo only)";
+      form.reset();
+    });
+  </script>
